@@ -36,6 +36,8 @@ CONFIG_FILE=clusters/homelab-k8s/hosts.yaml python3 kubespray/contrib/inventory_
 cat cluster/homelab-k8s/hosts.yaml
 ```
 
+# Create file /clusters/homelab-k8s/cluster-config.yaml
+
 # Deploy cluster
 ```
 cd kubespray

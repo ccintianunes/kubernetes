@@ -41,7 +41,7 @@ cat cluster/homelab-k8s/hosts.yaml
 # Deploy cluster
 ```
 cd kubespray
-ansible-playbook -i ../clusters/homelab-k8s/hosts.yaml -e @../clusters/homelab-k8s/cluster-config.yaml --user=root --become --become-user=root cluster.yaml
+ansible-playbook -i ../clusters/homelab-k8s/hosts.yaml -e @../clusters/homelab-k8s/cluster-config.yaml --user=root --become --become-user=root cluster.yml
 ```
 
 # Verify deployment
@@ -55,7 +55,7 @@ less /etc/kubernetes/admin.conf
 
 # Upgrade Cluster
 ```
-ansible-playbook -i ../clusters/homelab-k8s/hosts.yaml -e @../clusters/homelab-k8s/cluster-config.yaml --user=root --become --become-user=root upgrade-cluster.yaml
+ansible-playbook -i ../clusters/homelab-k8s/hosts.yaml -e @../clusters/homelab-k8s/cluster-config.yaml --user=root --become --become-user=root upgrade-cluster.yml
 ```
 
 # Scale Down Cluster

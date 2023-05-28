@@ -33,7 +33,7 @@ CONFIG_FILE=clusters/homelab-k8s/hosts.yaml python3 kubespray/contrib/inventory_
 
 # Inspect hosts.yaml
 ```
-cat cluster/homelab-k8s/hosts.yaml
+cat clusters/homelab-k8s/hosts.yaml
 ```
 
 # Create file /clusters/homelab-k8s/cluster-config.yaml

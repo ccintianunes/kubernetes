@@ -30,7 +30,7 @@ cat cluster/homelab-k8s/hosts.yaml
 
 # Create file /cluster/homelab-k8s/cluster-config.yaml
 
-# Deploy cluster
+# Reset cluster
 ```
 cd kubespray
 ansible-playbook -i ../cluster/homelab-k8s/hosts.yaml -e @../cluster/homelab-k8s/cluster-config.yaml --user=root --become --become-user=root reset.yml

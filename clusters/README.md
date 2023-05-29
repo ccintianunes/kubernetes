@@ -4,17 +4,9 @@ mkdir -p homelab/kubernetes
 cd homelab/kubernetes
 ```
 
-
 # Clone the kubespray Project
 ```
 git clone https://github.com/kubernetes-sigs/kubespray.git
-```
-
-
-# Install and activate python virtual environment
-```
-python3 -m venv kubespray-venv
-source kubespray-venv/bin/activate
 ```
 
 # Install ansible 
@@ -37,6 +29,12 @@ cat cluster/homelab-k8s/hosts.yaml
 ```
 
 # Create file /cluster/homelab-k8s/cluster-config.yaml
+
+# Deploy cluster
+```
+cd kubespray
+ansible-playbook -i ../cluster/homelab-k8s/hosts.yaml -e @../cluster/homelab-k8s/cluster-config.yaml --user=root --become --become-user=root reset.yml
+```
 
 # Deploy cluster
 ```

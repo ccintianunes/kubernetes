@@ -27,21 +27,21 @@ pip install -U -r requirements-2.12.txt
 ```
 declare -a IPS=(172.20.0.21 172.20.0.22 172.20.0.23 172.20.0.24 172.20.0.25)
 cd ../ 
-mkdir -p clusters/homelab-k8s
-CONFIG_FILE=clusters/homelab-k8s/hosts.yaml python3 kubespray/contrib/inventory_builder/inventory.py ${IPS[@]}
+mkdir -p cluster/homelab-k8s
+CONFIG_FILE=cluster/homelab-k8s/hosts.yaml python3 kubespray/contrib/inventory_builder/inventory.py ${IPS[@]}
 ```
 
 # Inspect hosts.yaml
 ```
-cat clusters/homelab-k8s/hosts.yaml
+cat cluster/homelab-k8s/hosts.yaml
 ```
 
-# Create file /clusters/homelab-k8s/cluster-config.yaml
+# Create file /cluster/homelab-k8s/cluster-config.yaml
 
 # Deploy cluster
 ```
 cd kubespray
-ansible-playbook -i ../clusters/homelab-k8s/hosts.yaml -e @../clusters/homelab-k8s/cluster-config.yaml --user=root --become --become-user=root cluster.yml
+ansible-playbook -i ../cluster/homelab-k8s/hosts.yaml -e @../cluster/homelab-k8s/cluster-config.yaml --user=root --become --become-user=root cluster.yml
 ```
 
 # Verify deployment
@@ -55,12 +55,12 @@ less /etc/kubernetes/admin.conf
 
 # Upgrade Cluster
 ```
-ansible-playbook -i ../clusters/homelab-k8s/hosts.yaml -e @../clusters/homelab-k8s/cluster-config.yaml --user=root --become --become-user=root upgrade-cluster.yml
+ansible-playbook -i ../cluster/homelab-k8s/hosts.yaml -e @../cluster/homelab-k8s/cluster-config.yaml --user=root --become --become-user=root upgrade-cluster.yml
 ```
 
 # Scale Down Cluster
 ```
-ansible-playbook -i ../clusters/homelab-k8s/hosts.yaml -e @../clusters/homelab-k8s/cluster-config.yaml --user=root --become --become-user=root remove-node.yaml -e node=node5
+ansible-playbook -i ../cluster/homelab-k8s/hosts.yaml -e @../cluster/homelab-k8s/cluster-config.yaml --user=root --become --become-user=root remove-node.yaml -e node=node5
 ```
 
 

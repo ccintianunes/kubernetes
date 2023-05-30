@@ -1,5 +1,3 @@
-```
-
 # Clone the kubespray Project
 ```
 git clone https://github.com/kubernetes-sigs/kubespray.git

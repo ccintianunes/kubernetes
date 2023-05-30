@@ -1,7 +1,3 @@
-# Create Project Directory
-```
-mkdir -p homelab/kubernetes
-cd homelab/kubernetes
 ```
 
 # Clone the kubespray Project

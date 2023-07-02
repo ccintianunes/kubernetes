@@ -1,4 +1,6 @@
 # kubernetes
+Guia para criar um cluster kubernetes com Ansible, utilizando o projeto Kubespray.
+
 # Clone the kubespray Project
 ```
 git clone https://github.com/kubernetes-sigs/kubespray.git
@@ -24,6 +26,11 @@ cat cluster/hosts.yaml
 ```
 
 # Create file /cluster/cluster-config.yaml
+inserir no arquivo:
+```
+cluster_name: homelab-k8s
+kube_version: v1.26.5
+```
 
 # Reset cluster
 ```

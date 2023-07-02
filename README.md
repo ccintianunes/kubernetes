@@ -14,7 +14,7 @@ pip install -U -r requirements-2.12.txt
 ```
 declare -a IPS=(172.20.0.21 172.20.0.22 172.20.0.23 172.20.0.24 172.20.0.25)
 cd ../ 
-mkdir -p cluster/homelab-k8s
+mkdir cluster
 CONFIG_FILE=cluster/hosts.yaml python3 kubespray/contrib/inventory_builder/inventory.py ${IPS[@]}
 ```
 

@@ -31,11 +31,11 @@ CONFIG_FILE=cluster/hosts.yaml python3 kubespray/contrib/inventory_builder/inven
 cat cluster/hosts.yaml
 ```
 
-# Create file /cluster/cluster-config.yaml
+# Create file cluster/cluster-config.yaml
 inserir no arquivo:
 ```
-cluster_name: homelab-k8s
-kube_version: v1.26.5
+echo "cluster_name: homelab-k8s" > cluster/cluster-config.yaml
+echo "kube_version: v1.26.5" >> cluster/cluster-config.yaml
 ```
 
 # Reset cluster

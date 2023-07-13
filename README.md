@@ -6,6 +6,12 @@ Guia para criar um cluster kubernetes com Ansible, utilizando o projeto Kubespra
 git clone https://github.com/kubernetes-sigs/kubespray.git
 ```
 
+# Install and activate python virtual environment
+```
+python3 -m venv kubespray-venv
+source kubespray-venv/bin/activate
+```
+
 # Install ansible 
 ```
 cd kubespray

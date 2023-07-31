@@ -1,6 +1,14 @@
 # kubernetes
 Guia para criar um cluster kubernetes com Ansible, utilizando o projeto Kubespray.
 
+## Crie um par de chave no orquestrador utilizando o usuário root, caminho padrão e sem senha de criptografia.
+Como no exemplo a seguir, basta executar o comando `ssh-keygen` 
+
+## Enviando a chave pública para nodes
+Para usar este comando que envia a chave pública é necessário habilitar o acesso por senha na maquina que receberá a chave: 
+```
+ssh-copy-id 'ip da máquina  destino'
+```
 # Clone the kubespray Project
 ```
 git clone https://github.com/kubernetes-sigs/kubespray.git
@@ -8,14 +16,17 @@ git clone https://github.com/kubernetes-sigs/kubespray.git
 
 # Install and activate python virtual environment
 ```
+apt install python3-venv
 python3 -m venv kubespray-venv
 source kubespray-venv/bin/activate
+
 ```
 
 # Install ansible 
+## Instalar bibliotecas python necessárias a partir do arquivo de texto
 ```
 cd kubespray
-pip install -U -r requirements-2.12.txt
+pip install -U -r requirements.txt
 ```
 
 # Create hosts inventory
